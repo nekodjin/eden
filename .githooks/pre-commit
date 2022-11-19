@@ -1,0 +1,6 @@
+#!/bin/env sh
+
+cargo +nightly fmt || exit 1
+cargo check || exit 1
+cargo check --release || exit 1
+git add Cargo.lock || exit 1
